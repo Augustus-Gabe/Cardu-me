@@ -1,0 +1,19 @@
+ <div *ngFor="let ferramenta of ferramentas">
+    <div class="row">
+        <div class="col-md-3 ">
+            <div class="circle mx-auto">
+              <img src="{{ ferramenta?.img }}" alt="{{ ferramenta?.descricaoImg }}" class="img-fluid">
+            </div>
+          </div>
+    
+          <div class="card col-md-8">
+            <div class="card-body">
+              <p>
+                <strong>{{ ferramenta?.nome }}:</strong> {{ ferramenta?.descricao }} </p>
+            </div>
+          </div>
+        
+    </div>
+    <br>
+    <br> 
+</div>      

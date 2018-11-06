@@ -1,0 +1,16 @@
+<form class="form" [formGroup]="formSMS" (ngSubmit)="enviarSMS(formSMS.value)">
+    <div class="form-group" [ngClass]="_validation.displayFieldCss(formSMS, 'telefone')">
+        <label for="telefone">telefone:</label>
+        <input type="telefone" formControlName="telefone" class="form-control" id="telefone" required>
+        <app-form-error-display [displayError]="_validation.isFieldValid(formSMS, 'telefone')" errorMsg="telefone deve ser preenchido">
+        </app-form-error-display>
+    </div>
+   
+    <div class="form-group" [ngClass]="_validation.displayFieldCss(formSMS, 'mensagem')">
+        <label for="informacaoAdicional">Mensagem</label>
+        <textarea formControlName="mensagem" class="form-control"></textarea>
+        <app-form-error-display [displayError]="_validation.isFieldValid(formSMS, 'mensagem')" errorMsg="mensagem deve ser preenchida!">
+        </app-form-error-display>
+    </div>
+    <input type="submit" class="btn submit text-center" value="enviar" [disabled]="!formSMS.valid">
+</form>

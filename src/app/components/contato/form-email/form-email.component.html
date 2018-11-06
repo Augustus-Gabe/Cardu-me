@@ -1,0 +1,17 @@
+<form class="form" [formGroup]="formContato" (ngSubmit)="enviarMsg(formContato.value)">
+    <div class="form-group" [ngClass]="_validation.displayFieldCss(formContato, 'email')">
+        <label for="email">Email:</label>
+        <input type="email" formControlName="email" class="form-control" id="email" required>
+        <app-form-error-display [displayError]="_validation.isFieldValid(formContato, 'email')" errorMsg="email invalido">
+        </app-form-error-display>
+
+    </div> 
+   
+    <div class="form-group" [ngClass]="_validation.displayFieldCss(formContato, 'mensagem')">
+        <label for="informacaoAdicional">Mensagem</label>
+        <textarea formControlName="mensagem" class="form-control"></textarea>
+        <app-form-error-display [displayError]="_validation.isFieldValid(formContato, 'mensagem')" errorMsg="mensagem deve ser preenchida!">
+        </app-form-error-display>
+    </div>
+    <input type="submit" class="btn submit text-center" value="enviar" [disabled]="!formContato.valid">
+</form>
