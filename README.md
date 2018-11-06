@@ -1,5 +1,7 @@
 # CarduMe
 
+### uma build de produção deste projeto está disponível em https://augustus-gabe.github.io/
+
 Este projeto foi desenvolvido como uma apresentação técnica de minhas habilidades com front-end. Esta é uma versão 'Alfa', Continuarei adicionando itens e fazendo ajustes neste projeto.
 
 A ideia é simples, Falar sobre mim como profissional e mostrar minhas habilidades, "vender meu peixe".
